@@ -1,0 +1,310 @@
+// * About Page // 
+
+.section-about {
+
+    .about {
+        width: 100%;
+        height: 100%;
+
+        &__title-section {
+            position: relative;
+            z-index: 0;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../img/night-story-2.jpg);
+            background-size: cover;
+            background-position: bottom;
+
+        }
+
+        &__title {
+            position: relative;
+            z-index: 1;
+            color: var(--color-white-1);
+            
+            &:before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                top: 29%;
+                left: -152%;
+                z-index: -1;
+                height: 41%;
+                width: 300%;
+                background-color: var(--color-secondary-med);
+                opacity: .45;
+
+                @media only screen and (max-width: $bp-med) {
+                    width: 260%;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    height: 49%;
+                }
+            }
+        }
+
+        &__section-top {
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 55vh;
+
+            @media only screen and (max-width: $bp-med-sm) {
+                height: 45vh;
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                height: 40vh;
+            }
+        }
+
+        &__text-title {
+            font-size: 7rem;
+            justify-self: flex-start;
+            align-self: flex-start;
+            margin-left: 14rem;
+            margin-bottom: 3rem;
+            color: var(--color-primary-light);
+        }
+
+        &__text-1 {
+            width: 85%;
+            justify-self: center;
+            position: relative;
+
+            @media only screen and (max-width: $bp-smaller) {
+                line-height: 25px;
+                font-size: 2.25rem;
+            }
+
+             @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+                line-height: 20px;
+            }  
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                top: 10%;
+                left: 0;
+                z-index: -1;
+                height: 90%;
+                width: 120%;
+                background-color: var(--color-primary);
+                opacity: .45;
+            }
+        }
+
+        &__section-mid {
+            height: 55vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @media only screen and (max-width: $bp-sm) {
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr;
+                height: 80vh;
+            }
+
+            .about__img-1 {
+                grid-column: 1 / 2;
+                background-image: url(../img/quoc-commuter.png);
+                background-position: center;
+                background-size: cover;
+
+                @media only screen and (max-width: $bp-sm) {
+                    grid-row: 1 / 2;
+                }
+            }
+
+            .about__text-2 {
+                grid-column: 2 / 3;
+                background-color: var(--color-secondary-med);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media only screen and (max-width: $bp-sm) {
+                    grid-row: 2 / 3;
+                    grid-column: 1 / 2;
+                }
+
+                p {
+                    width: 80%;
+                }
+
+                @media only screen and (max-width: $bp-med) {
+                    line-height: 25px;
+                }
+
+                @media only screen and (max-width: $bp-med) {
+                    font-size: 2.25rem;
+                    letter-spacing: 2px;
+                }
+
+                @media only screen and (max-width: $bp-sm) {
+                    font-size: 2rem;
+                    letter-spacing: 4px;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    font-size: 1.5rem;
+                    letter-spacing: 2px;
+                    line-height: 20px;
+                }                
+            }
+        }
+
+        &__section-bottom {
+            width: 100%;
+            height: 110vh;
+            display: grid;
+            gap: 2rem;
+            grid-template-rows: .15fr 1fr;
+            grid-template-columns: .25fr 1fr 1fr .25fr;
+            
+            @media only screen and (max-width: $bp-largest) {
+                gap: 1.5rem;
+            }
+
+            @media only screen and (max-width: $bp-large) {
+                gap: 2rem;
+                height: 105vh;
+            }
+
+            @media only screen and (max-width: $bp-med) {
+                height: 100vh;
+                grid-template-rows: .05fr 1fr;
+            }
+
+            @media only screen and (max-width: $bp-sm-med) {
+                grid-template-columns: .15fr 1fr 1fr .15fr;
+                grid-template-rows: 0fr 1fr;
+                height: 80vh;
+            }
+
+            @media only screen and (max-width: $bp-sm) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                height: 80vh;
+            }
+
+
+        }
+
+        &__text-3 {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            @media only screen and (max-width: $bp-sm) {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                top: 29%;
+                left: -41%;
+                z-index: -1;
+                height: 41%;
+                width: 120%;
+                background-color: var(--color-secondary-med);
+                opacity: .45;
+
+                @media only screen and (max-width: $bp-med) {
+                    height: 56%;
+                    top: 23%;
+                }
+            }
+            
+            p {
+                width: 80%;
+                line-height: 40px;
+
+                @media only screen and (max-width: $bp-sm-med) {
+                    line-height: 35px;
+                    letter-spacing: 2px;
+                }
+
+                @media only screen and (max-width: $bp-sm-med) {
+                    font-size: 2.25rem;
+                    width: 100%;
+                }
+
+                @media only screen and (max-width: $bp-sm) {
+                    width: 80%;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    width: 80%;
+                    font-size: 1.5rem;
+                    letter-spacing:  2px;
+                    line-height: 25px;
+                }
+            }
+        }
+
+        &__logo {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            justify-self: center;
+            align-self: center;
+            object-fit: contain;
+            width: 90%;
+            height: 90%;
+
+            @media only screen and (max-width: $bp-sm) {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+                width: 50%;
+                height: 75%;
+            }
+        }
+
+        &__img-2 {
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
+            background-image: url(../img/Our-story-Gran-Tourer-crop.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            align-self: center;
+
+            @media only screen and (max-width: $bp-med) {
+                height: 80%;
+            }
+            
+            @media only screen and (max-width: $bp-med-sm) {
+                height: 70%;
+            }
+            
+            @media only screen and (max-width: $bp-sm-med) {
+                height: 60%;
+            }
+
+            @media only screen and (max-width: $bp-sm) {
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                height: 100%;
+                background-position: 50% 75%;
+            }
+        }
+
+    }
+}

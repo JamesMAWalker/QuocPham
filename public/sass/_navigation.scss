@@ -1,0 +1,116 @@
+// * Navigation Bar Elements //
+
+.user-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+    width: 100%;
+}
+
+.logo-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+        
+.logo {
+    position: relative;
+    display: flex;
+    margin: 3rem;
+    width: 8rem;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+
+    
+}
+
+.icon-box {
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: $bp-smallest) {
+        visibility: hidden;
+    }
+
+    &__link {
+        font-family: $font-title;    
+        font-size: 2rem;
+        color: inherit;
+        text-decoration: none;
+
+        transition: all .2s;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.5rem;
+        }
+        
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    &__bag-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__bag {
+        width: 3rem;
+        position: relative;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 2.75rem
+        }
+
+        @media only screen and (max-width: $bp-med-sm) {
+            width: 2.5rem;
+        }
+    }
+
+    &__qty {
+        color: var(--text-color-primary);
+        font-size: 2rem;
+        padding: .5rem;
+        position: relative;
+        margin-right: 1rem;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-med-sm) {
+            font-size: 1rem;
+        }
+    }
+
+    &__qty::before {
+        position: absolute;
+        top: 4px;
+        left: -5px;
+        height: 3rem;
+        width: 3rem;
+        z-index: -1;
+        content: "";
+        border-radius: 100%;
+        background-color: var(--color-primary-tr);
+
+        @media only screen and (max-width: $bp-large) {
+            top: 1px;
+        }
+
+        @media only screen and (max-width: $bp-med-sm) {
+            top: 2px;
+            left: -2px;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+}

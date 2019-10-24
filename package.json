@@ -1,0 +1,32 @@
+{
+  "name": "quocpham",
+  "version": "1.0.0",
+  "description": "Quoc Pham Concept Site",
+  "main": "app.js",
+  "scripts": {
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.comp.css",
+    "concat:css": "concat -o public/css/style.concat.css public/css/icon-font.css public/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.concat.css -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "author": "James",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.6"
+  }
+}

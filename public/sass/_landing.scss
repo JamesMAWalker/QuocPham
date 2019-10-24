@@ -1,0 +1,256 @@
+// * Landing Page //
+
+.section-hero {
+    height: 100vh;
+    width: 100%;
+
+    @media only screen and (max-width: $bp-large) {
+        height: 80vh;
+    }
+
+    @media only screen and (max-width: $bp-med-sm) {
+        height: 75vh;
+    }
+
+    @media only screen and (max-width: $bp-sm-med) {
+        height: 70vh;
+    }
+
+    @media only screen and (max-width: $bp-sm-med) {
+        height: 65vh;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        height: 100vh;
+    }
+
+    .hero {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+
+        &-left {
+            grid-column: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 90%;
+            align-self: center;
+
+            @media only screen and (max-width: $bp-smallest) {
+                grid-row: 2 / 3;
+            }
+
+            &__title {
+                position: relative;
+
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 4.5rem;
+                }
+
+                @media only screen and (max-width: $bp-large) {
+                    font-size: 3.75rem;
+                }
+
+                @media only screen and (max-width: $bp-med) {
+                    font-size: 3rem;
+                }
+
+                @media only screen and (max-width: $bp-med-sm) {
+                    font-size: 2.75rem;
+                    letter-spacing: .3rem;
+                }
+
+                @media only screen and (max-width: $bp-sm-med) {
+                    font-size: 2.5rem;
+                    letter-spacing: .3rem;
+                }
+
+                @media only screen and (max-width: $bp-sm) {
+                    font-size: 2.25rem;
+                    letter-spacing: .2rem;
+                }
+            }
+
+            &__title::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                height: 150%;
+                width: 400rem;
+                transform: translate(4%, -15%);
+                background-color: var(--color-primary);
+            }
+
+            &__text {
+                width: 40%;
+                transform: translateY(6rem);
+                // margin-left: -2rem;
+
+                @media only screen and (max-width: $bp-med-sm) {
+                    font-size: 1.5rem;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    transform: translateY(3rem);
+                }
+            }
+
+            &__sub-text {
+                width: 100%;
+                text-align: right;
+                position: relative;
+                transform: translateY(6rem);
+
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 10rem;
+                }
+
+                @media only screen and (max-width: $bp-large) {
+                    font-size: 8rem;
+                }
+
+                @media only screen and (max-width: $bp-med) {
+                    font-size: 7rem;
+                }
+
+                @media only screen and (max-width: $bp-med-sm) {
+                    letter-spacing: .6rem;
+                    transform: translateY(4rem)
+                }
+
+                @media only screen and (max-width: $bp-sm-med) {
+                    font-size: 5.5rem
+                }
+
+                @media only screen and (max-width: $bp-sm) {
+                    font-size: 5rem;
+                    letter-spacing: 0.4rem;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    visibility: hidden;
+                }
+            }
+
+            &__sub-text::after {
+                content: "PANACHE";
+                position: absolute;
+                top: 0;
+                left: 51vw;
+                z-index: -1;
+                height: 10.8rem;
+                width: 64rem;
+                color: var(--color-primary);
+                // transform: translate(-71%, -30%);
+
+                @media only screen and (max-width: $bp-largest) {
+                    left: 44vw;
+                }
+
+                @media only screen and (max-width: $bp-large) {
+                    left: 36vw;
+                }
+
+                @media only screen and (max-width: $bp-med) {
+                    left: 27vw;
+                }
+
+                @media only screen and (max-width: $bp-med-sm) {
+                    left: 20vw;
+                }
+
+                @media only screen and (max-width: $bp-sm-med) {
+                    left: 6.5vw;
+                }
+
+                @media only screen and (max-width: $bp-sm) {
+                    left: -5vw;
+                }
+
+                @media only screen and (max-width: $bp-smaller) {
+                    left: -14vw;
+                }
+            }
+
+            &__btn-container {
+                position: relative;
+                display: flex;
+                width: 60%;
+                align-items: center;
+                justify-content: space-evenly;
+
+                @media only screen and (max-width: $bp-large) {
+                    width: 75%;
+                }
+            }
+
+            &__btn-container::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                height: 10.8rem;
+                width: 35vw;
+                transform: translate(-71%, -30%);
+                background-color: var(--color-secondary);
+
+                @media only screen and (max-width: $bp-large) {
+                    height: 9rem;
+                    top: 5px;
+                }
+
+                @media only screen and (max-width: $bp-med-sm) {
+                    height: 6.5rem;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    top: 6px;
+                    height: 5.5rem;
+                    width: 42vh;
+                }
+            }
+
+            &__btn--1 {
+                color: var(--color-white-1);
+            }
+
+            &__btn--2 {
+                color: var(--color-white-1);
+            }
+        }
+
+        &-right {
+            position: relative;
+            grid-column: 2 / 3;
+            position: relative;
+            z-index: -2;
+            background-image: url(../img/quoc-night.jpg);
+            background-position: center;
+            background-size: auto;
+
+            @media only screen and (max-width: $bp-smallest) {
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                background-size: cover;
+            }
+
+            &__sub-text {
+                position: absolute;
+                top: 56%;
+                left: 1rem;
+            }
+        }
+    }
+}

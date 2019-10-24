@@ -1,0 +1,55 @@
+// * Base Styles //
+
+
+:root {
+    --color-primary: rgb(249, 184, 185);
+    --color-primary-light: rgb(255, 204, 204);
+    --color-primary-dark: rgb(251, 157, 180);
+    --color-primary-tr: rgba(249, 184, 185, .5);
+
+    --color-secondary: rgb(210, 211, 215);
+    --color-secondary-med: rgb(196, 196, 196);
+    --color-secondary-dark: rgb(77, 79, 83);
+
+    --color-white-1: rgb(255, 255, 255);
+    --color-black-1: rgb(1, 1, 1);
+    
+    --text-color-primary: rgb(43, 44, 49); 
+
+
+}
+
+// Fonts
+$font-title: 'Roboto', sans-serif;
+$font-content: 'Roboto Slab', serif;
+$font-sub-title: 'Roboto Condensed', sans-serif;
+
+// Breakpoints
+$bp-largest: 100em; // 1600px
+$bp-large: 81.25em; // 1300px
+$bp-med: 68.75em; // 1100px 
+$bp-med-sm: 56.25em; // 900px
+$bp-sm-med: 50em; // 800px 
+$bp-sm: 43.75em; // 700px 
+$bp-smaller: 37.5em; // 600px 
+$bp-smallest: 35em; // 560px 
+
+
+// Resets
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    font-family: $font-content;
+    color: var(--text-color-primary);
+}
