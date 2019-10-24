@@ -11,7 +11,8 @@
     "concat:css": "concat -o public/css/style.concat.css public/css/icon-font.css public/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.concat.css -o public/css/style.prefix.css",
     "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "start:app": "node app.js"
   },
   "author": "James",
   "license": "ISC",
